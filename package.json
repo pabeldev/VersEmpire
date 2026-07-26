@@ -1,0 +1,13 @@
+{
+  "name": "versempire",
+  "version": "1.0.0",
+  "description": "Ismam Jahan — Author & Poet Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static build complete'"
+  },
+  "keywords": ["author", "portfolio", "poet", "bengali", "versempire"],
+  "author": "Ismam Jahan",
+  "license": "MIT"
+}
