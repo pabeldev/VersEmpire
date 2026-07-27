@@ -242,9 +242,11 @@ button, input, textarea, select, a, p, span, h1, h2, h3, h4, h5, h6, li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  justify-content: center;
+  gap: 16px;
   list-style: none;
   width: 100%;
+  margin: auto 0 !important; /* Vertically center buttons in left sidebar */
 }
 
 .nav-link {
@@ -257,7 +259,7 @@ button, input, textarea, select, a, p, span, h1, h2, h3, h4, h5, h6, li {
   justify-content: center;
   color: var(--text-muted);
   text-decoration: none;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -276,11 +278,12 @@ button, input, textarea, select, a, p, span, h1, h2, h3, h4, h5, h6, li {
   text-align: center;
 }
 
-.nav-link:hover, .nav-link.active {
+/* Hover State */
+.nav-link:hover {
   color: #fff;
   background: rgba(0, 240, 255, 0.14);
   border-color: var(--border-cyan);
-  transform: scale(1.06) translateY(-2px);
+  transform: translateX(6px) scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px var(--cyan-glow);
 }
 
@@ -289,16 +292,24 @@ button, input, textarea, select, a, p, span, h1, h2, h3, h4, h5, h6, li {
   color: var(--neon-cyan);
 }
 
+/* Active State: Full Fill Color & Popped Out to the Right */
+.nav-link.active {
+  color: var(--bg-dark) !important;
+  background: linear-gradient(135deg, var(--neon-cyan), #00b4ff) !important;
+  border-color: var(--neon-cyan) !important;
+  transform: translateX(10px) scale(1.08) !important;
+  box-shadow: 0 8px 25px rgba(0, 240, 255, 0.6), 0 0 25px var(--cyan-glow) !important;
+  border-radius: 20px !important;
+}
+
+.nav-link.active i,
+.nav-link.active .nav-text {
+  color: var(--bg-dark) !important;
+  font-weight: 800 !important;
+}
+
 .nav-link.active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 25%;
-  bottom: 25%;
-  width: 3px;
-  background: var(--neon-cyan);
-  border-radius: 3px;
-  box-shadow: 0 0 10px var(--neon-cyan);
+  content: none;
 }
 
 /* Nav CTA Button */
