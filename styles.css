@@ -194,30 +194,32 @@ button, input, textarea, select, a, p, span, h1, h2, h3, h4, h5, h6, li {
   width: 100%;
 }
 
-/* Top Center Sticky Logo Header Badge */
-.top-logo-badge {
+/* Top Right Sticky Logo Round Glass Badge */
+.top-right-logo-badge {
   position: fixed;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 20px;
+  right: 28px;
   z-index: 1001;
   background: rgba(10, 16, 36, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-cyan);
   border-radius: var(--radius-pill);
-  padding: 8px 24px;
+  padding: 10px 24px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.2);
   transition: all 0.25s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.top-logo-badge:hover {
-  transform: translateX(-50%) scale(1.04);
+.top-right-logo-badge:hover {
+  transform: scale(1.06) translateY(-2px);
   border-color: var(--neon-cyan);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 28px var(--cyan-glow);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 30px var(--cyan-glow);
 }
 
-.top-logo-badge .logo {
+.top-right-logo-badge .logo {
   font-family: var(--font-display) !important;
   font-size: 1.35rem;
   font-weight: 800;
