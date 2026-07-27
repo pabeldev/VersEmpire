@@ -164,51 +164,44 @@ button, input, textarea, select, a, p, span, h1, h2, h3, h4, h5, h6, li {
 }
 
 /* ==========================================================================
-   Header / Sticky Navigation Bar
+   Header / Left Sidebar Navigation Bar (Desktop & Mobile Responsive)
    ========================================================================== */
 .header-wrapper {
   position: fixed;
-  top: 20px;
+  top: 0;
   left: 0;
-  right: 0;
+  bottom: 0;
+  width: 260px;
   z-index: 1000;
   display: flex;
-  justify-content: center;
-  padding: 0 16px;
-  pointer-events: none;
-}
-
-.navbar {
-  pointer-events: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1100px;
-  padding: 12px 28px;
-  background: rgba(10, 16, 36, 0.82);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--border-cyan);
-  border-radius: var(--radius-pill);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.2);
+  flex-direction: column;
+  padding: 32px 20px;
+  background: rgba(10, 16, 36, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid var(--border-cyan);
+  box-shadow: 8px 0 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 240, 255, 0.15);
   transition: var(--transition-smooth);
 }
 
-.navbar:hover {
-  border-color: rgba(0, 240, 255, 0.5);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 240, 255, 0.3);
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
 }
 
 .logo {
   font-family: var(--font-display) !important;
-  font-size: 1.65rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--text-main);
   text-decoration: none;
   letter-spacing: -0.5px;
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .logo-dot {
@@ -218,64 +211,94 @@ button, input, textarea, select, a, p, span, h1, h2, h3, h4, h5, h6, li {
 
 .nav-links {
   display: flex;
-  align-items: center;
-  gap: 32px;
+  flex-direction: column;
+  gap: 16px;
   list-style: none;
+  width: 100%;
 }
 
 .nav-link {
   font-size: 1.05rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-muted);
   text-decoration: none;
-  transition: var(--transition-smooth);
+  padding: 12px 18px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
-  padding: 4px 0;
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--neon-cyan);
-  text-shadow: 0 0 8px var(--cyan-glow);
+  color: #fff;
+  background: rgba(0, 240, 255, 0.12);
+  border: 1px solid var(--border-cyan);
+  transform: scale(1.05) translateX(4px);
+  box-shadow: 0 0 15px var(--cyan-glow);
 }
 
-.nav-link::after {
+.nav-link.active::after {
   content: '';
   position: absolute;
-  bottom: 0;
   left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-blue));
-  transition: var(--transition-smooth);
-  border-radius: 2px;
-}
-
-.nav-link:hover::after, .nav-link.active::after {
-  width: 100%;
+  top: 20%;
+  bottom: 20%;
+  width: 4px;
+  background: var(--neon-cyan);
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--neon-cyan);
 }
 
 /* Nav CTA Button */
 .btn-nav {
-  padding: 10px 24px;
+  padding: 14px 20px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--bg-dark);
   background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
   border: none;
   border-radius: var(--radius-pill);
   cursor: pointer;
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  box-shadow: 0 0 18px var(--cyan-glow);
-  transition: var(--transition-smooth);
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 0 20px var(--cyan-glow);
+  margin-top: auto;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-nav:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 28px rgba(0, 240, 255, 0.7);
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 0 32px rgba(0, 240, 255, 0.8);
   color: #fff;
+}
+
+/* Global Button Hover Scale-Up Effects */
+.btn-primary, .btn-outline, .btn-card-primary, .btn-card-secondary, .btn-request-author, .btn-social, .btn-tool {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.btn-primary:hover, .btn-card-primary:hover, .btn-request-author:hover {
+  transform: scale(1.08) translateY(-2px) !important;
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.8) !important;
+}
+
+.btn-outline:hover, .btn-card-secondary:hover, .btn-social:hover, .btn-tool:hover {
+  transform: scale(1.08) translateY(-2px) !important;
+}
+
+/* Desktop Main Content Margin Offset for Left Sidebar */
+@media (min-width: 1025px) {
+  body {
+    padding-left: 260px;
+  }
+  .hero-section {
+    padding-top: 100px;
+  }
 }
 
 /* Mobile Toggle */
@@ -1621,6 +1644,56 @@ button, input, textarea, select, a, p, span, h1, h2, h3, h4, h5, h6, li {
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
+  body {
+    padding-left: 0;
+  }
+  
+  .header-wrapper {
+    position: fixed;
+    top: 16px;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    padding: 0 16px;
+    background: none;
+    border-right: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .navbar {
+    pointer-events: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 12px 24px;
+    background: rgba(10, 16, 36, 0.88);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--border-cyan);
+    border-radius: var(--radius-pill);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.2);
+  }
+
+  .logo {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  .nav-links, .btn-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 40px;
