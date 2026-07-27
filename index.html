@@ -25,26 +25,46 @@
   <div class="bg-glow-orb-2"></div>
 
   <!-- ==========================================================================
-       Section 1: Navigation Bar (Sticky & Floating Pill Header)
+       Section 1: Navigation Bar (macOS Style Compact Left Sidebar)
        ========================================================================== -->
   <header class="header-wrapper">
     <nav class="navbar" aria-label="Main Navigation">
-      <!-- Left: Logo -->
-      <a href="#home" class="logo">
+      <!-- Top: Logo -->
+      <a href="#home" class="logo" title="VersEmpire">
         VersEmpire<span class="logo-dot">.</span>
       </a>
 
-      <!-- Center: Nav Links -->
+      <!-- Center: macOS Style Compact Vertical Nav Links -->
       <ul class="nav-links">
-        <li><a href="#home" class="nav-link active">হোম</a></li>
-        <li><a href="#authors" class="nav-link">শীর্ষ লেখকবৃন্দ</a></li>
-        <li><a href="#about-platform" class="nav-link">প্ল্যাটফর্ম পরিচিতি</a></li>
-        <li><a href="#featured-story" class="nav-link">সপ্তাহের সেরা</a></li>
+        <li>
+          <a href="#home" class="nav-link active" title="হোম">
+            <i class="fas fa-home"></i>
+            <span class="nav-text">হোম</span>
+          </a>
+        </li>
+        <li>
+          <a href="#authors" class="nav-link" title="লেখকবৃন্দ">
+            <i class="fas fa-user-nib"></i>
+            <span class="nav-text">লেখকগণ</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about-platform" class="nav-link" title="ফিচারসমূহ">
+            <i class="fas fa-shapes"></i>
+            <span class="nav-text">ফিচারস</span>
+          </a>
+        </li>
+        <li>
+          <a href="#featured-story" class="nav-link" title="সপ্তাহের সেরা">
+            <i class="fas fa-crown"></i>
+            <span class="nav-text">সেরা</span>
+          </a>
+        </li>
       </ul>
 
-      <!-- Right: CTA Button -->
-      <button onclick="openAuthorRequestModal()" class="btn-nav">
-        <i class="fas fa-feather-alt"></i> প্রোফাইল রিকোয়েস্ট
+      <!-- Bottom: Sleek Icon CTA Button -->
+      <button onclick="openAuthorRequestModal()" class="btn-nav" title="প্রোফাইল রিকোয়েস্ট করুন">
+        <i class="fas fa-feather-alt"></i>
       </button>
 
       <!-- Mobile Hamburger Toggle -->
