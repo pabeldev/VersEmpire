@@ -1063,12 +1063,212 @@ button, input, textarea, select, a, p, span, h1, h2, h3, h4, h5, h6, li {
   border: none;
   display: block;
 }
-.footer-section {
-  padding: 70px 0 30px;
-  border-top: 1px solid var(--border-cyan);
-  background: #03050B;
-  position: relative;
+/* ==========================================================================
+   Platform Landing Page Styles (VersEmpire Platform)
+   ========================================================================== */
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
+
+.platform-author-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-cyan);
+  border-radius: var(--radius-card);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  backdrop-filter: blur(14px);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.platform-author-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 35px var(--cyan-glow);
+}
+
+.author-card-avatar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.author-card-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--neon-cyan);
+  box-shadow: 0 0 20px var(--cyan-glow);
+}
+
+.author-card-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.author-card-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.author-card-role {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.author-card-rating {
+  font-size: 0.88rem;
+  color: var(--amber-gold);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Feature Cards Grid (About VersEmpire) */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.platform-feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-cyan);
+  border-radius: 20px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  backdrop-filter: blur(12px);
+  transition: var(--transition-smooth);
+}
+
+.platform-feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px var(--cyan-glow);
+}
+
+.feature-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(0, 240, 255, 0.12);
+  border: 1px solid var(--border-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--neon-cyan);
+}
+
+.feature-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.feature-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Featured Story of the Week */
+.featured-story-card {
+  background: linear-gradient(135deg, rgba(10, 18, 38, 0.9), rgba(15, 28, 58, 0.9));
+  border: 1px solid var(--neon-cyan);
+  border-radius: 30px;
+  padding: 48px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px var(--cyan-glow);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: var(--radius-pill);
+  color: var(--amber-gold);
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.featured-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.featured-excerpt {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.featured-author-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.featured-author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--neon-cyan);
+}
+
+.featured-author-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .authors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured-story-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .authors-grid, .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .footer-grid {
   display: grid;

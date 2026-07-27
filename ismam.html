@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ismam Jahan — Author & Poet Portfolio | VersEmpire</title>
+  <meta name="description" content="Official literary portfolio website of author & poet Ismam Jahan. Author of Nirjon Jolchobi (নির্জন জলছবি).">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Interactive Cursor Glow Spotlight -->
+  <div class="cursor-glow-spotlight" id="cursorGlow"></div>
+
+  <!-- Cyber Neon Grid Overlay -->
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- Background Animated Neon Orbs -->
+  <div class="bg-glow-orb-1"></div>
+  <div class="bg-glow-orb-2"></div>
+
+  <!-- ==========================================================================
+       Section 1: Navigation Bar (Sticky & Floating Pill Header)
+       ========================================================================== -->
+  <header class="header-wrapper">
+    <nav class="navbar" aria-label="Main Navigation">
+      <!-- Left: Logo -->
+      <a href="index.html" class="logo">
+        VersEmpire<span class="logo-dot">.</span>
+      </a>
+
+      <!-- Center: Nav Links -->
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> হোম</a></li>
+        <li><a href="#home" class="nav-link active">ইসমাম জাহান</a></li>
+        <li><a href="#books" class="nav-link">বইসমূহ</a></li>
+        <li><a href="#about" class="nav-link">পরিচিতি</a></li>
+        <li><a href="#poems" class="nav-link">কবিতা</a></li>
+        <li><a href="#recitations" class="nav-link">আবৃত্তি</a></li>
+      </ul>
+
+      <!-- Right: CTA Button -->
+      <a href="#books" class="btn-nav">
+        <i class="fas fa-book-open"></i> বইসমূহ দেখুন
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="nav-link">হোম পেজ</a></li>
+      <li><a href="#home" class="nav-link">ইসমাম জাহান</a></li>
+      <li><a href="#books" class="nav-link">বইসমূহ</a></li>
+      <li><a href="#about" class="nav-link">পরিচিতি</a></li>
+      <li><a href="#poems" class="nav-link">কবিতা</a></li>
+      <li><a href="#recitations" class="nav-link">আবৃত্তি</a></li>
+      <li style="margin-top: 10px;">
+        <a href="#books" class="btn-primary" style="padding: 10px 24px; font-size: 1rem;">
+          <i class="fas fa-book-open"></i> বইসমূহ দেখুন
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- ==========================================================================
+       Section 2: Hero Section
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Column: Author Picture with Ambient Glow Aura -->
+        <div class="hero-portrait-wrapper">
+          <div class="hero-portrait-glow"></div>
+          <div class="hero-portrait-frame">
+            <img src="assets/author_ismam.jpg" alt="Ismam Jahan holding her book Nirjon Jolchobi" class="hero-img">
+          </div>
+        </div>
+
+        <!-- Right Column: Quote & Action Buttons -->
+        <div class="hero-content">
+          <div class="author-tag">
+            <i class="fas fa-feather-alt"></i> কবি ও কথা সাহিত্যিক
+          </div>
+
+          <h1 class="hero-quote">
+            <i class="fas fa-quote-left quote-icon"></i>
+            "জীবনের সব হিসাব শেষ পর্যন্ত না মিললেও, শব্দগুলোই কেবল অবিনশ্বর হয়ে থেকে যায়।"
+          </h1>
+
+          <!-- Action Buttons -->
+          <div class="hero-buttons">
+            <button onclick="openReaderModal('নির্জন জলছবি')" class="btn-primary">
+              <i class="fas fa-book-reader"></i> বই পড়ুন
+            </button>
+            <button onclick="openAudioModal()" class="btn-outline">
+              <i class="fas fa-headphones-alt"></i> অডিও বুক
+            </button>
+          </div>
+
+          <!-- Social Proof Badge -->
+          <div class="social-proof-badge">
+            <div class="avatar-stack">
+              <img src="https://i.pravatar.cc/100?img=12" alt="Reader Avatar" class="avatar-img">
+              <img src="https://i.pravatar.cc/100?img=25" alt="Reader Avatar" class="avatar-img">
+              <img src="https://i.pravatar.cc/100?img=32" alt="Reader Avatar" class="avatar-img">
+              <img src="https://i.pravatar.cc/100?img=47" alt="Reader Avatar" class="avatar-img">
+              <img src="https://i.pravatar.cc/100?img=68" alt="Reader Avatar" class="avatar-img">
+            </div>
+            <div class="rating-info">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text">88% 5-Star Ratings</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       Section 3: Book Showcase (বইসমূহ)
+       ========================================================================== -->
+  <section class="books-section" id="books">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-subtitle">প্রকাশিত গ্রন্থাবলী</span>
+        <h2 class="section-title">ইসমাম জাহানের বইসমূহ</h2>
+      </div>
+
+      <div class="books-grid">
+        
+        <!-- Book Card 1: Nirjon Jolchobi (Real Cover Uploaded by User) -->
+        <div class="book-card">
+          <div class="book-cover-wrapper">
+            <span class="book-badge">প্রথম একক বই</span>
+            <img src="assets/book_nirjon_jolchobi_real.png" alt="নির্জন জলছবি বইয়ের প্রচ্ছদ" class="book-cover-img">
+          </div>
+          <div class="book-info">
+            <h3 class="book-title">নির্জন জলছবি</h3>
+            <p class="book-tagline">রোমান্টিক কাব্যগ্রন্থ • নবকথন প্রকাশনী</p>
+          </div>
+          <div class="book-actions">
+            <button onclick="openReaderModal('নির্জন জলছবি')" class="btn-card-secondary">
+              একটু পড়ে দেখুন
+            </button>
+            <button onclick="openOrderModal('নির্জন জলছবি')" class="btn-card-primary">
+              সংগ্রহ করুন
+            </button>
+          </div>
+        </div>
+
+        <!-- Book Card 2: Shobder Meghbalika -->
+        <div class="book-card">
+          <div class="book-cover-wrapper">
+            <span class="book-badge">কাব্য সংকলন</span>
+            <img src="assets/book_shobder_meghbalika.jpg" alt="শব্দের মেঘবালিকা বইয়ের প্রচ্ছদ" class="book-cover-img">
+          </div>
+          <div class="book-info">
+            <h3 class="book-title">শব্দের মেঘবালিকা</h3>
+            <p class="book-tagline">কাব্য সংকলন • শব্দবাড়ি প্রকাশনী</p>
+          </div>
+          <div class="book-actions">
+            <button onclick="openReaderModal('শব্দের মেঘবালিকা')" class="btn-card-secondary">
+              একটু পড়ে দেখুন
+            </button>
+            <button onclick="openOrderModal('শব্দের মেঘবালিকা')" class="btn-card-primary">
+              সংগ্রহ করুন
+            </button>
+          </div>
+        </div>
+
+        <!-- Book Card 3: Obinoshshor -->
+        <div class="book-card">
+          <div class="book-cover-wrapper">
+            <span class="book-badge">আসন্ন গদ্য</span>
+            <img src="assets/book_nirjon_jolchobi_real.png" alt="অন্তর্ভেদী সুর বইয়ের প্রচ্ছদ" class="book-cover-img">
+          </div>
+          <div class="book-info">
+            <h3 class="book-title">অন্তর্ভেদী সুর</h3>
+            <p class="book-tagline">মনস্তাত্ত্বিক গদ্য কাব্য • নবকথন প্রকাশনী</p>
+          </div>
+          <div class="book-actions">
+            <button onclick="openReaderModal('অন্তর্ভেদী সুর')" class="btn-card-secondary">
+              একটু পড়ে দেখুন
+            </button>
+            <button onclick="openOrderModal('অন্তর্ভেদী সুর')" class="btn-card-primary">
+              সংগ্রহ করুন
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       Section 4: About Author (লেখিকা পরিচিতি)
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      
+      <div class="about-card-wrapper">
+        
+        <!-- Author Profile Header -->
+        <div class="author-header">
+          <img src="assets/author_about_profile.jpg" alt="Ismam Jahan Profile" class="author-avatar-lg">
+          <div class="author-title-block">
+            <div class="author-name-row">
+              <h2 class="author-name">Ismam Jahan</h2>
+              <!-- User Uploaded Verified Badge Icon -->
+              <img src="assets/verified_badge.png" alt="Verified Author" class="verified-badge-img" title="Verified Author">
+            </div>
+            <div class="author-roles-tags">
+              <span class="role-tag">📷 বই সমালোচক- Project Queen</span>
+              <span class="role-tag">🏷️ স্বত্বাধিকারী- শব্দবাড়ি বুকশপ</span>
+              <span class="role-tag">📚 লেখিকা- নির্জন জলছবি (বই)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Author Bio Grid -->
+        <div class="about-body-grid">
+          
+          <div class="about-text-content">
+            
+            <div class="bio-block">
+              <h3 class="bio-heading"><i class="fas fa-book-reader"></i> 📖 সংক্ষিপ্ত পরিচিতি</h3>
+              <p class="bio-paragraph">
+                ইসমাম জাহান একাধারে কবি, তরুণ লেখক এবং শব্দের রূপকার। ঢাকার ইট-কাঠের যান্ত্রিক শহরের নাগরিক কোলাহলে বেড়ে উঠলেও তার ভাবনার শেকড় জড়িয়ে আছে জামালপুরের স্নিগ্ধ মাটির টানে। বর্তমানে রাষ্ট্রবিজ্ঞানের শিক্ষার্থী ইসমাম রাজনীতির জটিল সমীকরণ আর রাষ্ট্র কাঠামোর ভেতর ডুবে থেকেও মূলত মানুষের মনের গভীর অনুভূতির কাব্যিক নির্যাস খুঁজে বেড়ান।
+              </p>
+              <p class="bio-paragraph">
+                তার প্রকাশিত প্রথম রোমান্টিক কাব্যগ্রন্থ 'নির্জন জলছবি' (নবকথন প্রকাশনী) পাঠকমননে নীরব নদীর মতো গভীর এক অন্তর্ভেদী সুর তৈরি করেছে।
+              </p>
+            </div>
+
+            <div class="bio-block">
+              <h3 class="bio-heading"><i class="fas fa-scroll"></i> 📜 কাব্য ভাবনা ও দূরদর্শী পথচলা</h3>
+              <p class="bio-paragraph">
+                তিন ভাই-বোনের মধ্যে সর্বকনিষ্ঠ হওয়ার সুবাদে শৈশব থেকেই একাকী আকাশ দেখা আর অনুভূতিগুলোকে খাতায় রূপ দেওয়ার এক অদ্ভুত নেশা ছিল তার। এই কাব্যিক যাত্রায় তার মা এবং প্রিয় 'লক্ষ্মীমনা'—এই দুজনের নিখাদ অনুপ্রেরণাই ছিল তার শব্দের জ্বালানি।
+              </p>
+              <p class="bio-paragraph">
+                ইসমাম বিশ্বাস করেন, কবিতার ছোট নৌকায় চেপে তার এই পথচলা শুধুই শুরু। তার আসল গন্তব্য বহু দূরে—এক মহাকাব্যিক উপন্যাসের গভীরে, যা একদিন রূপ নেবে পাঠকের হৃদয়স্পন্দনে।
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Quick Facts Side Card -->
+          <div class="quick-facts-card">
+            <h3 class="facts-title">📌 এক নজরে লেখক</h3>
+
+            <div class="fact-item">
+              <span class="fact-label">পেশা / পরিচয়:</span>
+              <span class="fact-value">কবি, গল্পকার ও প্রফেশনাল কনটেন্ট ক্রিয়েটর</span>
+            </div>
+
+            <div class="fact-item">
+              <span class="fact-label">শিক্ষাগত যোগ্যতা:</span>
+              <span class="fact-value">রাষ্ট্রবিজ্ঞান (স্নাতক)</span>
+            </div>
+
+            <div class="fact-item">
+              <span class="fact-label">বিশেষত্ব:</span>
+              <span class="fact-value">রোমান্টিক কবিতা, সামাজিক জীবনদর্শন ও মনস্তাত্ত্বিক গল্প</span>
+            </div>
+
+            <div class="fact-item">
+              <span class="fact-label">প্রথম বই:</span>
+              <span class="fact-value">নির্জন জলছবি (২০০৩-এর শরৎকালীন কবি ইসমাম জাহানের প্রথম একক কাব্যগ্রন্থ)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Social Connect Block -->
+        <div class="social-connect-block">
+          <h4 class="social-title">🌐 আমার সাথে যুক্ত থাকুন</h4>
+          <div class="social-buttons-grid">
+            <a href="https://facebook.com/Brideofgoblin" target="_blank" class="btn-social btn-facebook">
+              <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://www.instagram.com/queen.reads2003" target="_blank" class="btn-social btn-instagram">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.youtube.com/@ProjectQueen" target="_blank" class="btn-social btn-youtube">
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       Section 5: Featured Poems (উল্লেখযোগ্য কবিতা)
+       ========================================================================== -->
+  <section class="poems-section" id="poems">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-subtitle">কাব্য নির্যাস</span>
+        <h2 class="section-title">উল্লেখযোগ্য কবিতা</h2>
+      </div>
+
+      <div class="poems-grid">
+        
+        <!-- Poem Card 1 -->
+        <div class="poem-card">
+          <div class="poem-content">
+"তোমায় হারিয়ে যে শূন্যতা জুড়ে আছে, 
+সেই শূন্যতাই হয়তো আমার একমাত্র সম্পদ। 
+তাই না পাওয়া এই আক্ষেপ নিয়েই, 
+তোমার ছায়া আঁকতে বসি প্রতিদিন, কবিতার খামে।"
+          </div>
+          <div class="poem-meta">
+            <span class="poem-source">বই: নির্জন জলছবি</span>
+            <span>লেখিকা: Ismam Jahan</span>
+          </div>
+          <div class="poem-card-tools">
+            <button onclick="copyPoem(this, `তোমায় হারিয়ে যে শূন্যতা জুড়ে আছে, \nসেই শূন্যতাই হয়তো আমার একমাত্র সম্পদ। \nতাই না পাওয়া এই আক্ষেপ নিয়েই, \nতোমার ছায়া আঁকতে বসি প্রতিদিন, কবিতার খামে।`, 'নির্জন জলছবি', 'Ismam Jahan')" class="btn-tool">
+              <i class="far fa-copy"></i> কপি করুন
+            </button>
+            <button onclick="toggleLike(this)" class="btn-tool">
+              <i class="fas fa-heart"></i> <span class="like-count">142</span>
+            </button>
+            <button onclick="recitePoem('তোমায় হারিয়ে যে শূন্যতা')" class="btn-tool">
+              <i class="fas fa-volume-up"></i> শুনুন
+            </button>
+          </div>
+        </div>
+
+        <!-- Poem Card 2 -->
+        <div class="poem-card">
+          <div class="poem-content">
+"তোমার কথারা জলের মত,
+নরম, নিঃশব্দে ভিজিয়ে দেয় অভিমান
+আমার চোখের কোণে জমে থাকা
+বিষণ্ন কালের ধুলোগুলো ধুয়ে যায়।"
+          </div>
+          <div class="poem-meta">
+            <span class="poem-source">একক কাব্য</span>
+            <span>- Ismam Jahan</span>
+          </div>
+          <div class="poem-card-tools">
+            <button onclick="copyPoem(this, `তোমার কথারা জলের মত,\nনরম, নিঃশব্দে ভিজিয়ে দেয় অভিমান\nআমার চোখের কোণে জমে থাকা\nবিষণ্ন কালের ধুলোগুলো ধুয়ে যায়।`, '', 'Ismam Jahan')" class="btn-tool">
+              <i class="far fa-copy"></i> কপি করুন
+            </button>
+            <button onclick="toggleLike(this)" class="btn-tool">
+              <i class="fas fa-heart"></i> <span class="like-count">198</span>
+            </button>
+            <button onclick="recitePoem('তোমার কথারা জলের মত')" class="btn-tool">
+              <i class="fas fa-volume-up"></i> শুনুন
+            </button>
+          </div>
+        </div>
+
+        <!-- Poem Card 3 -->
+        <div class="poem-card">
+          <div class="poem-content">
+"তুমি চলে গেলে
+আমি কি তবে একা হব?"
+          </div>
+          <div class="poem-meta">
+            <span class="poem-source">বই: নির্জন জলছবি</span>
+            <span>- Ismam Jahan</span>
+          </div>
+          <div class="poem-card-tools">
+            <button onclick="copyPoem(this, `তুমি চলে গেলে\nআমি কি তবে একা হব?`, 'নির্জন জলছবি', 'Ismam Jahan')" class="btn-tool">
+              <i class="far fa-copy"></i> কপি করুন
+            </button>
+            <button onclick="toggleLike(this)" class="btn-tool">
+              <i class="fas fa-heart"></i> <span class="like-count">165</span>
+            </button>
+            <button onclick="recitePoem('তুমি চলে গেলে')" class="btn-tool">
+              <i class="fas fa-volume-up"></i> শুনুন
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       Modals (Book Reader, Audiobook Player, Order Form, Author Request)
+       ========================================================================== -->
+
+  <!-- 1. Book Reader Modal -->
+  <div class="modal-overlay" id="readerModal">
+    <div class="modal-container">
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+      <h3 class="modal-header-title" id="readerModalTitle">নির্জন জলছবি — নমুনা পাঠ</h3>
+      <div style="color: var(--text-muted); line-height: 1.9; font-size: 1.1rem; white-space: pre-line;">
+        <strong>[ ১ম অধ্যায়: নদীর অন্তরালে ]</strong>
+
+        "জলছবির আয়নায় দাঁড়িয়ে যখন নিজেকে দেখি,
+        তখন মনে হয় সময় যেন স্থির হয়ে আছে।
+        শব্দগুলো কথা বলতে চায়, 
+        কিন্তু নিস্তব্ধতাই যেন তাদের শ্রেষ্ঠ ভাষা।"
+
+        তিন ভাই-বোনের মধ্যে সর্বকনিষ্ঠ হওয়ার সুবাদে শৈশব থেকেই একাকী আকাশ দেখা আর অনুভূতিগুলোকে খাতায় রূপ দেওয়ার এক অদ্ভুত নেশা ছিল তার। এই কাব্যিক যাত্রায় তার মা এবং প্রিয় 'লক্ষ্মীমনা'—এই দুজনের নিখাদ অনুপ্রেরণাই ছিল তার শব্দের জ্বালানি।
+      </div>
+      <div style="margin-top: 24px; display: flex; justify-content: flex-end;">
+        <button onclick="openOrderModal('নির্জন জলছবি')" class="btn-primary" style="padding: 10px 24px; font-size: 0.95rem;">
+          সম্পূর্ণ বইটি সংগ্রহ করুন
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Audiobook Player Modal -->
+  <div class="modal-overlay" id="audioModal">
+    <div class="modal-container">
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+      <div class="audio-player-wrapper">
+        <h3 class="modal-header-title" style="margin-bottom: 4px;">🎧 অডিও বুক প্লেয়ার</h3>
+        <p style="color: var(--text-muted);">নির্জন জলছবি — ইসমাম জাহানের কণ্ঠে আবৃত্তি</p>
+
+        <div class="audio-visualizer-bars">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <button class="btn-audio-play" id="audioPlayBtn">
+          <i class="fas fa-play"></i>
+        </button>
+
+        <span style="color: var(--neon-cyan); font-size: 0.95rem; font-weight: 600;">
+          02:45 / 14:20
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Order Purchase Modal -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal-container">
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+      <h3 class="modal-header-title" id="orderModalTitle">বই সংগ্রহ করুন</h3>
+      <form class="order-form" id="orderForm">
+        <div class="form-group">
+          <label class="form-label">আপনার পূর্ণ নাম</label>
+          <input type="text" class="form-input" placeholder="আপনার নাম লিখুন..." required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">মোবাইল নম্বর</label>
+          <input type="tel" class="form-input" placeholder="০১৭XXXXXXXX" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">ডেলিভারি ঠিকানা</label>
+          <textarea class="form-input" rows="3" placeholder="সম্পূর্ণ ঠিকানা লিখুন..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%; justify-content: center;">
+          অর্ডার কনফার্ম করুন (ক্যাশ অন ডেলিভারি)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. Request Author Profile Modal -->
+  <div class="modal-overlay" id="authorRequestModal">
+    <div class="modal-container">
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+      <h3 class="modal-header-title">✒️ লেখক প্রোফাইল রিকোয়েস্ট</h3>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">VersEmpire প্ল্যাটফর্মে নিজের সাহিত্য পোর্টফোলিও তৈরি করতে তথ্য জমা দিন।</p>
+      <form class="order-form" id="authorRequestForm">
+        <div class="form-group">
+          <label class="form-label">আপনার নাম (Author Name)</label>
+          <input type="text" class="form-input" placeholder="লেখকের নাম লিখুন..." required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">ফোন / ইমেইল (Contact)</label>
+          <input type="text" class="form-input" placeholder="ইমেইল বা ফোন নম্বর..." required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">প্রকাশিত বই বা সাহিত্য ধরণ</label>
+          <input type="text" class="form-input" placeholder="যেমন: কাব্যগ্রন্থ, উপন্যাস, গল্প..." required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">সংক্ষিপ্ত বার্তা</label>
+          <textarea class="form-input" rows="3" placeholder="আপনার সাহিত্য চর্চা সম্পর্কে সংক্ষেপে লিখুন..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%; justify-content: center;">
+          রিকোয়েস্ট পাঠান
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       Section 6: Recitations Showcase (শিল্পীদের কণ্ঠে আবৃত্তি)
+       ========================================================================== -->
+  <section class="recitations-section" id="recitations">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-subtitle">কাব্য আবৃত্তি ভিডিও</span>
+        <h2 class="section-title">বিভিন্ন শিল্পীদের কণ্ঠে ইসমাম জাহানের কবিতা</h2>
+      </div>
+
+      <div class="recitations-grid">
+        
+        <!-- Video 1 -->
+        <div class="video-card-wrapper">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F1586333749837856%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card-wrapper">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F1141027041547560%2F&show_text=false&width=380&t=0" width="300" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card-wrapper">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F1639519227135723%2F&show_text=false&width=380&t=0" width="300" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-card-wrapper">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F993838130306989%2F&show_text=false&width=380&t=0" width="300" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+
+        <!-- Video 5 -->
+        <div class="video-card-wrapper">
+          <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fweb.facebook.com%2Freel%2F2275920616563269%2F&show_text=false&width=380&t=0" width="300" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       Section 7: Minimalistic & Responsive Clean Footer
+       ========================================================================== -->
+  <footer class="footer-section">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Footer Column 1: Brand Info -->
+        <div class="footer-col">
+          <div class="footer-brand">
+            VersEmpire<span class="logo-dot">.</span>
+          </div>
+          <p class="footer-desc">
+            ইসমাম জাহানের বই, কাব্য ভাবনা ও সাহিত্যচর্চার ডিজিটাল কেন্দ্র। শব্দের শিল্পে হৃদয় ছোঁয়ার কাব্যিক আয়োজন।
+          </p>
+        </div>
+
+        <!-- Footer Column 2: Site Map -->
+        <div class="footer-col">
+          <h4 class="footer-title">সাইট ম্যাপ</h4>
+          <ul class="footer-sitemap">
+            <li><a href="index.html"><i class="fas fa-chevron-right text-cyan-400"></i> প্ল্যাটফর্ম হোম (Platform Home)</a></li>
+            <li><a href="#books"><i class="fas fa-chevron-right text-cyan-400"></i> ইসমামের বইসমূহ (Books)</a></li>
+            <li><a href="#about"><i class="fas fa-chevron-right text-cyan-400"></i> লেখিকা পরিচিতি (About)</a></li>
+            <li><a href="#poems"><i class="fas fa-chevron-right text-cyan-400"></i> উল্লেখযোগ্য কবিতা (Poems)</a></li>
+            <li><a href="javascript:void(0)" onclick="openAudioModal()"><i class="fas fa-chevron-right text-cyan-400"></i> অডিও বুক (Audiobooks)</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3: Request Author Profile Card -->
+        <div class="footer-col">
+          <div class="author-request-card">
+            <h4 class="request-card-title">
+              <i class="fas fa-feather-alt text-cyan-400"></i> লেখক প্রোফাইল রিকোয়েস্ট
+            </h4>
+            <p class="request-card-text">
+              আপনি কি একজন লেখক? VersEmpire প্ল্যাটফর্মে আপনার নিজস্ব পোর্টফোলিও তৈরি ও বই প্রকাশ করতে রিকোয়েস্ট পাঠান।
+            </p>
+            <button onclick="openAuthorRequestModal()" class="btn-request-author">
+              প্রোফাইল রিকোয়েস্ট করুন
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Credit Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2026 Ismam Jahan (ইসমাম জাহান). সর্বস্বত্ব সংরক্ষিত।
+        </p>
+        <p class="footer-credit">
+          Developed by <a href="https://www.framempire.com" target="_blank" class="footer-link">Team FramEmpire</a> (www.framempire.com)
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>
